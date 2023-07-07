@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  row-gap: 10px;
+}
+
+input {
+  width: 100px;
+  margin-left: 28px;
+}
+
+label {
+  display: flex;
+  float: left;
+}
+
+button {
+  width: 100%;
+}
+
+.input-row {
+  display: flex;
+}
+
+table td {
+  border: 1px solid purple;
+}
