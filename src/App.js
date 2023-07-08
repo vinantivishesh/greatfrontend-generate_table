@@ -10,6 +10,7 @@ const Table = ({ rows, cols }) => {
             <th colspan={cols}>Regular Row Increase</th>
           </thead>
           <tbody>
+            <td colspan={cols}>cols * row + (col + 1)</td>
             {Array.from({ length: rows }, () => 0).map((_, row) => (
               <tr key={row}>
                 {Array.from({ length: cols }, () => 0).map((_, col) => (
@@ -30,6 +31,12 @@ const Table = ({ rows, cols }) => {
             <th colspan={cols}>Zigzag Row Increase</th>
           </thead>
           <tbody>
+            <tr colspan={cols}>
+              <td colspan={cols}>even row index: cols * row + (col + 1)</td>
+            </tr>
+            <tr>
+              <td colspan={cols}>odd row index: cols * (row + 1) - col</td>
+            </tr>
             {Array.from({ length: rows }, () => 0).map((_, row) => (
               <tr key={row}>
                 {Array.from({ length: cols }, () => 0).map((_, col) => (
@@ -54,6 +61,7 @@ const Table = ({ rows, cols }) => {
             <th colspan={cols}>Regular Col Increase</th>
           </thead>
           <tbody>
+            <td colspan={cols}>rows * col + (row + 1)</td>
             {Array.from({ length: rows }, () => 0).map((_, row) => (
               <tr key={row}>
                 {Array.from({ length: cols }, () => 0).map((_, col) => (
@@ -68,6 +76,12 @@ const Table = ({ rows, cols }) => {
             <th colspan={cols}>Zigzag Col Increase</th>
           </thead>
           <tbody>
+            <tr colspan={cols}>
+              <td colspan={cols}>even col index: rows * col + (row + 1)</td>
+            </tr>
+            <tr>
+              <td colspan={cols}>odd col index: rows * (col + 1) - row</td>
+            </tr>
             {Array.from({ length: rows }, () => 0).map((_, row) => (
               <tr key={row}>
                 {Array.from({ length: cols }, () => 0).map((_, col) => (
